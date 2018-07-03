@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main(){
+	int x, cant;
+	struct al{
+		int mat, sem;
+		char name[50];
+		float prom;
+		char carrera[90];
+	};
+	struct al a[10];
+	
+	printf("Ingrese la cantidad de alumnos a registrar: ");
+	scanf("%d", &cant);
+	
+	for(x=0; x<cant; x++){
+		printf("Ingrese la matricula del alumno %d: ", x+1);
+		scanf("%d", &a[x].mat);
+		printf("Ingrese el nombre del alumno %d: ", x+1);
+		fflush(stdin);
+		gets(a[x].name);
+		printf("Ingrese el promedio del alumno %d: ", x+1);
+		scanf("%f", &a[x].prom);
+		printf("Ingrese el semestre del alumo %d: ", x+1);
+		scanf("%d", &a[x].sem);
+		printf("Ingrese la carrera del alumno %d: ", x+1);
+		fflush(stdin);
+		gets(a[x].carrera);
+		printf("\n");
+	} 
+		printf("\n");
+	for(x=0; x<cant; x++){
+		printf("%d\t %s\t %f\t %d\t %s\n", a[x].mat, a[x].name, a[x].prom, a[x].sem, a[x].carrera);
+	}
+	
+	
+	return 0;
+}
