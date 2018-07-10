@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(){
+	FILE *apuntador;
+	char a;
+	
+	apuntador=fopen("C:/Users/S205E10/Documents/MC/HW.txt","r");
+	while(a!=EOF){
+		a=getc(apuntador);
+		printf("%c", a);
+	}
+	
+	
+}
