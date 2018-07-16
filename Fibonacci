@@ -1,0 +1,23 @@
+#include <stdio.h>
+int fibonacci(int n);
+
+int main(){
+	int num, f, x;
+	
+	scanf("%d", &num);
+	for(x=1; x<=num; x++){
+	f=fibonacci(x);
+	printf("%d\t", f);
+	}
+}
+
+int fibonacci(int n){
+	int fibo;
+	
+	if(n<=2){
+		fibo=1;
+		return(fibo);
+	} else{
+		fibo=fibonacci(n-1)+fibonacci(n-2);
+	}
+}
